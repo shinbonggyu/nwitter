@@ -1,1 +1,1 @@
-module.exports = () => global.Message;
+module.exports = () => global.message; //대소문자 구별
