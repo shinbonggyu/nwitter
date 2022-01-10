@@ -7,4 +7,4 @@ http.createServer((req,res) =>{
 })
 .listen(8083,()=>{
     console.log('8083번 포트에서 서버 대기중입니다!');
-});
+}); 
