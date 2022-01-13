@@ -1,25 +1,32 @@
 {
-  "name": "pack",
+  "name": "learn-express",
   "version": "0.0.1",
-  "description": "hello package.json",
-  "main": "index.js",
+  "description": "익스프레스를 배우자",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shinbonggyu/node.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "node"
+  ],
+  "author": "ZeroCho",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shinbonggyu/node/issues"
   },
   "homepage": "https://github.com/shinbonggyu/node#readme",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "dotenv": "^11.0.0",
     "express": "^4.17.2",
     "express-session": "^1.17.2",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
