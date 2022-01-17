@@ -6,8 +6,12 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 dotenv.config();
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
 const app = express();
 app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 app.use(morgan('dev'));
 app.use('/', express.static(path.join(__dirname,'public')));
@@ -24,6 +28,14 @@ app.use(session({
     },
     name:'session-cookie',
 }));
+
+app.use('/',indexRouter);
+app.use('/user', userRouter);
+
+app.use((req,res,next)=>{
+    res.status(404).send('Not Found');
+});
+
 const multer = require('multer');
 const fs = require('fs');
 try{
