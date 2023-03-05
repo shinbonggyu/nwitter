@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-
+import "firebase/auth";
 
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -13,6 +13,7 @@ import firebase from 'firebase/app';
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
     appId: process.env.REACT_APP_APP_ID
   };
+firebase.initializeApp(firebaseConfig);
 
   // Initialize Firebase
-  export default firebase.initializeApp(firebaseConfig);
+  export default firebase.auth();
